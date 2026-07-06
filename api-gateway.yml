@@ -9,11 +9,11 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/orders/**
-          # filters:
-          #   - name: LoggingOrdersFilter
-          #   - name: Authentication
-          #     args:
-          #       enabled: true
+          filters:
+            - name: LoggingOrdersFilter
+            - name: Authentication
+              args:
+                enabled: true
 
 #            - name: Authorization
 #              args:
